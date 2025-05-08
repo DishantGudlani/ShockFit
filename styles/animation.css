@@ -1,0 +1,115 @@
+/* Keyframe animations */
+
+@keyframes slideInRight {
+    0% {
+      transform: translateX(100%); /* Start from the right side */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animation classes */
+  .animate-slide-in-right {
+    animation: slideInRight 1s ease-out;
+  }
+  
+  .animate-slide-in-top {
+    animation: slideInTop 1s ease-out;
+  }
+  
+  .animate-slide-in-bottom {
+    animation: slideInBottom 1s ease-out;
+  }
+  
+  /* Gradient shadow */
+  .gradient-shadow {
+    position: relative;
+  }
+  
+  .gradient-shadow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(145deg, violet, white); /* Gradient from violet to white */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adjust shadow for better effect */
+    filter: blur(10px); /* Create a blurred gradient effect */
+    z-index: -1;
+    opacity: 0.5; /* Adjust opacity as needed */
+  }
+  .logo{
+    max-width: 100px;
+  }
+  .gallery {
+    display: flex; /* Use flexbox for a horizontal layout */
+    overflow-x: auto; /* Allows horizontal scrolling if images exceed container width */
+    padding: 20px;
+    gap: 15px; /* Space between images */
+    align-items: center; 
+    max-width: none;/* Center items vertically in the row */
+  }
+  
+  .gallery-item {
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    width: 100px; /* Fixed width for each image container */
+    height: 100px; /* Fixed height for each image container */
+    display: flex; /* Use flex to center the image */
+    align-items: center; /* Center image vertically within container */
+    justify-content: center; /* Center image horizontally within container */
+  }
+  
+  .gallery-item img {
+    border-radius: 10px;
+    width: 100%; /* Ensure image fits the container width */
+    height: 100%; /* Ensure image fits the container height */
+    object-fit: cover; /* Ensure images cover their container without distortion */
+  }
+  
+.custom-class-5{
+  width: 100px;
+  height: 100px;
+}
+  
+  
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+/* ---- tsparticles container ---- */
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
